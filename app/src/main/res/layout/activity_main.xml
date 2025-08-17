@@ -13,6 +13,7 @@
         android:layout_height="56dp"
         android:layout_marginBottom="70dp"
         android:clickable="true"
+        android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.954"
@@ -34,13 +35,16 @@
         app:titleCentered="true"
         app:titleTextColor="#FAFAFA" />
 
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/todo_list"
-        android:layout_width="411dp"
-        android:layout_height="569dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/todo_title" />
 
     <TextView
         android:id="@+id/todo_title"
